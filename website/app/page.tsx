@@ -15,8 +15,10 @@ export default function Home() {
         <h1 className="text-5xl font-bold text-white">Hello, I'm Florian.</h1>
         <h2 className="text-2xl text-blue-400">DevOps Engineer & Network Automation Enthusiast</h2>
         <p className="max-w-2xl text-slate-400 text-lg leading-relaxed">
-          With a solid background in Software Engineering, I bridge the gap between code and infrastructure. 
-          I am passionate about automating complex network flows and building robust CI/CD pipelines.
+          Coming soon: A detailed introduction about myself and my journey into the world of DevOps and Network Automation.
+           {/* With a solid background in Software Engineering, I bridge the gap between code and infrastructure. 
+          I am passionate about automating complex network flows and building robust CI/CD pipelines. */}
+          
         </p>
       </section>
 
@@ -34,7 +36,7 @@ export default function Home() {
           <ul className="list-disc list-inside text-slate-400 space-y-2">
             <li>Exploring new Containerlab topologies</li>
             <li>Contributing to Open Source Network tools</li>
-            <li>CrossFit, Running Biking and Church (Offline mode)</li>
+            <li>CrossFit, Running, Biking and Church (Offline mode)</li>
           </ul>
         </div>
       </section>
