@@ -26,7 +26,7 @@ export default function Home() {
           <h3 className="text-xl font-bold mb-4 flex items-center"><Terminal className="mr-2" /> The Journey</h3>
           <p className="text-slate-400">
             My path started in traditional software engineering, but my curiosity led me to the world of operations and networking.
-            Currently, I am deep-diving into <span className="text-white">eBPF</span> and advanced <span className="text-white">Kubernetes networking</span>.
+            More coming soon.
           </p>
         </div>
         <div className="bg-slate-900 p-6 rounded-lg border border-slate-800">
