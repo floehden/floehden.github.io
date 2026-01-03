@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Point to the docs folder INSIDE the website directory
-          path: ./website/docs
+          path: ./website/out
 
   deploy:
     environment:
