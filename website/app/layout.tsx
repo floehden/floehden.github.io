@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/" className="font-bold text-xl text-blue-400">FL.</Link>
             <div className="space-x-6 text-sm font-medium">
               <Link href="/" className="hover:text-blue-400 transition">About</Link>
-              <Link href="/projects" className="hover:text-blue-400 transition">Projects & Res</Link>
+              <Link href="/projects" className="hover:text-blue-400 transition">Projects & Resources</Link>
               <Link href="/blog" className="hover:text-blue-400 transition">Blog</Link>
               <Link href="/links" className="hover:text-blue-400 transition">Links</Link>
             </div>

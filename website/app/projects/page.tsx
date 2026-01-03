@@ -16,7 +16,7 @@ export default function Projects() {
     }, 
     {
       id: 2,
-      title: "Game for Learning Network Automation",
+      title: "Netventure: Network Automation Game",
       teaser: "An interactive game to teach network automation concepts.",
       details: "This public project is a web-based game designed to help users learn network automation. Players complete challenges by writing scripts to automate network tasks, receiving feedback and progressing through levels.",
       status: "Private",
@@ -101,7 +101,7 @@ export default function Projects() {
           ))}
         </div>
       </section>
-      
+
       {/* Resources Section */}
       <section>
         <h2 className="text-3xl font-bold mb-8 flex items-center"><BookOpen className="mr-2 text-green-400"/> Resources</h2>
