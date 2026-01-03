@@ -3,10 +3,10 @@ import { Terminal, Code, Server, Mic } from 'lucide-react';
 export default function Home() {
   const skills = ['Go (Golang)', 'Python', 'GitLab CI/CD', 'Kubernetes', 'Containerlab', 'Docker', 'Linux'];
   const talks = [
-    {organizer:"Frankfurt Rhein-Main Gophers Meetup", title: "Configuring network devices through Kubernetes", event_url: "https://www.meetup.com/gophers-frm/events/308682690/", date: "10 Jul 2025", location: "Frankfurt, Germany", git_repository: "https://github.com/floehden/gofrm59"},
-    {organizer:"NetAuto Group", title: "What is Network Automation for everyone?", event_url: "https://www.meetup.com/netauto-rheinmain/events/308664470/", date: "04 Sep 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode1/readme.md"},
-    {organizer:"NetAuto Group", title: "NetAuto Hackathon: Intermediate Task", event_url: "https://www.meetup.com/netauto-rheinmain/events/311340322/", date: "06 Nov 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode3/readme.md"},
     {organizer:"NetAuto Group", title: "Discussion on IPv6", event_url: "https://www.meetup.com/netauto-rheinmain/events/311887700/", date: "11 Dec 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode4/readme.md"},
+    {organizer:"NetAuto Group", title: "NetAuto Hackathon: Intermediate Task", event_url: "https://www.meetup.com/netauto-rheinmain/events/311340322/", date: "06 Nov 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode3/readme.md"},
+    {organizer:"NetAuto Group", title: "What is Network Automation for everyone?", event_url: "https://www.meetup.com/netauto-rheinmain/events/308664470/", date: "04 Sep 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode1/readme.md"},
+    {organizer:"Frankfurt Rhein-Main Gophers Meetup", title: "Configuring network devices through Kubernetes", event_url: "https://www.meetup.com/gophers-frm/events/308682690/", date: "10 Jul 2025", location: "Frankfurt, Germany", git_repository: "https://github.com/floehden/gofrm59"},
   ];
   return (
     <div className="space-y-16 py-10">
