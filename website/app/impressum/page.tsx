@@ -12,7 +12,6 @@ export default function Impressum() {
 
       <section>
         <h2 className="text-xl font-semibold mb-2">Kontakt</h2>
-        <p>Telefon: +49 1517 2062105</p>
         <p>E-Mail: <a href="mailto:florian.loehden@gmail.com" className="text-blue-400">florian.loehden@gmail.com</a></p>
       </section>
 

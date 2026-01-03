@@ -1,6 +1,13 @@
 import { Terminal, Code, Server, Mic } from 'lucide-react';
 
 export default function Home() {
+  const skills = ['Go (Golang)', 'Python', 'GitLab CI/CD', 'Kubernetes', 'Containerlab', 'Docker', 'Linux'];
+  const talks = [
+    {organizer:"Frankfurt Rhein-Main Gophers Meetup", title: "Configuring network devices through Kubernetes", event_url: "https://www.meetup.com/gophers-frm/events/308682690/", date: "10 Jul 2025", location: "Frankfurt, Germany", git_repository: "https://github.com/floehden/gofrm59"},
+    {organizer:"NetAuto Group", title: "What is Network Automation for everyone?", event_url: "https://www.meetup.com/netauto-rheinmain/events/308664470/", date: "04 Sep 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode1/readme.md"},
+    {organizer:"NetAuto Group", title: "NetAuto Hackathon: Intermediate Task", event_url: "https://www.meetup.com/netauto-rheinmain/events/311340322/", date: "06 Nov 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode3/readme.md"},
+    {organizer:"NetAuto Group", title: "Discussion on IPv6", event_url: "https://www.meetup.com/netauto-rheinmain/events/311887700/", date: "11 Dec 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode4/readme.md"},
+  ];
   return (
     <div className="space-y-16 py-10">
       {/* Hero Section */}
@@ -27,7 +34,7 @@ export default function Home() {
           <ul className="list-disc list-inside text-slate-400 space-y-2">
             <li>Exploring new Containerlab topologies</li>
             <li>Contributing to Open Source Network tools</li>
-            <li>Hiking and Photography (Offline mode)</li>
+            <li>CrossFit, Running Biking and Church (Offline mode)</li>
           </ul>
         </div>
       </section>
@@ -36,7 +43,7 @@ export default function Home() {
       <section>
         <h3 className="text-2xl font-bold mb-6 flex items-center"><Code className="mr-2"/> Tech Stack</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {['Go (Golang)', 'Python', 'GitLab CI/CD', 'Kubernetes', 'Ansible', 'Containerlab', 'Docker', 'Linux'].map(skill => (
+          {skills.map(skill => (
             <div key={skill} className="bg-slate-800 p-3 rounded text-center font-mono text-sm hover:bg-blue-600 transition cursor-default">
               {skill}
             </div>
@@ -46,16 +53,15 @@ export default function Home() {
 
       {/* Talks */}
       <section>
-        <h3 className="text-2xl font-bold mb-6 flex items-center"><Mic className="mr-2"/> Talks & Events</h3>
+        <h3 className="text-2xl font-bold mb-6 flex items-center"><Mic className="mr-2"/> Talks & Presentations</h3>
         <div className="space-y-4">
-          <div className="border-l-4 border-blue-500 pl-4">
-            <h4 className="font-bold text-lg">Network Automation at Scale</h4>
-            <p className="text-sm text-slate-400">NetAuto Rhein-Main Meetup • 2024</p>
-          </div>
-          <div className="border-l-4 border-purple-500 pl-4">
-            <h4 className="font-bold text-lg">GitLab CI for Network Engineers</h4>
-            <p className="text-sm text-slate-400">DevOps Days • 2023</p>
-          </div>
+          {talks.map((talk, idx) => (
+            <a key={idx} href={talk.event_url} target="_blank" className="block p-4 bg-slate-900 border border-slate-800 hover:border-blue-500 transition rounded-lg group">
+              <h4 className="font-bold text-lg group-hover:text-blue-400 transition">{talk.title}</h4>
+              <p className="text-slate-500 text-sm">{talk.date} - {talk.location} | by {talk.organizer}</p>
+              <a href={talk.git_repository} target="_blank" className="text-blue-400 text-sm hover:underline">View Slides/Code</a>
+            </a>
+          ))}
         </div>
       </section>
     </div>
