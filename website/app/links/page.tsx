@@ -10,6 +10,7 @@ export default function Links() {
     { name: "Bluesky", url: "https://bsky.app/profile/floehden.bsky.social", icon: <AtSign /> },
     { name: "Threads", url: "https://www.threads.net/@floehden", icon: <AtSign /> },
     { name: "Instagram", url: "https://www.instagram.com/floehden", icon: <AtSign /> },
+    { name: "Strava", url: "https://www.strava.com/athletes/61968225", icon: <AtSign /> },
   ];
 
   return (
