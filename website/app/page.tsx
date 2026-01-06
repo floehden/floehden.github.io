@@ -58,22 +58,12 @@ export default function Home() {
       <section>
         <h3 className="text-2xl font-bold mb-6 flex items-center"><Mic className="mr-2"/> Talks & Presentations</h3>
         <div className="space-y-4">
-          {talks.map((talk, index) => (
-            <div key={index} className="bg-slate-800 p-4 rounded border border-slate-700 hover:border-blue-600 transition">
-              <h4 className="text-xl font-semibold text-white">
-                <a href={talk.event_url} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                  {talk.title}
-                </a>
-              </h4>
-              <p className="text-slate-400">
-                <strong>Organizer:</strong> {talk.organizer} | <strong>Date:</strong> {talk.date} | <strong>Location:</strong> {talk.location}
-              </p>
-              <p className="text-slate-400">
-                <a href={talk.git_repository} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
-                  View Slides/Repository
-                </a>
-              </p>
-            </div>
+          {talks.map((talk, idx) => (
+            <a key={idx} href={talk.event_url} target="_blank" className="block p-4 bg-slate-900 border border-slate-800 hover:border-blue-500 transition rounded-lg group">
+              <h4 className="font-bold text-lg group-hover:text-blue-400 transition">{talk.title}</h4>
+              <p className="text-slate-500 text-sm">{talk.date} - {talk.location} | by {talk.organizer}</p>
+              <a href={talk.git_repository} target="_blank" className="text-blue-400 text-sm hover:underline">View Slides/Code</a>
+            </a>
           ))}
         </div>
       </section>
