@@ -1,12 +1,13 @@
+import { stat } from 'fs';
 import { Terminal, Code, Server, Mic } from 'lucide-react';
 
 export default function Home() {
   const skills = ['Go (Golang)', 'Python', 'GitLab CI/CD', 'Kubernetes', 'Containerlab', 'Docker', 'Linux'];
   const talks = [
-    {organizer:"NetAuto Group", title: "Discussion on IPv6", event_url: "https://www.meetup.com/netauto-rheinmain/events/311887700/", date: "11 Dec 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode4/readme.md"},
-    {organizer:"NetAuto Group", title: "NetAuto Hackathon: Intermediate Task", event_url: "https://www.meetup.com/netauto-rheinmain/events/311340322/", date: "06 Nov 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode3/readme.md"},
-    {organizer:"NetAuto Group", title: "What is Network Automation for everyone?", event_url: "https://www.meetup.com/netauto-rheinmain/events/308664470/", date: "04 Sep 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode1/readme.md"},
-    {organizer:"Frankfurt Rhein-Main Gophers Meetup", title: "Configuring network devices through Kubernetes", event_url: "https://www.meetup.com/gophers-frm/events/308682690/", date: "10 Jul 2025", location: "Frankfurt, Germany", git_repository: "https://github.com/floehden/gofrm59"},
+    {organizer:"NetAuto Group", title: "Discussion on IPv6", event_url: "https://www.meetup.com/netauto-rheinmain/events/311887700/", date: "11 Dec 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode4/readme.md", status: "done"},
+    {organizer:"NetAuto Group", title: "NetAuto Hackathon: Intermediate Task", event_url: "https://www.meetup.com/netauto-rheinmain/events/311340322/", date: "06 Nov 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode3/readme.md", status: "done"},
+    {organizer:"NetAuto Group", title: "What is Network Automation for everyone?", event_url: "https://www.meetup.com/netauto-rheinmain/events/308664470/", date: "04 Sep 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode1/readme.md", status: "done"},
+    {organizer:"Frankfurt Rhein-Main Gophers Meetup", title: "Configuring network devices through Kubernetes", event_url: "https://www.meetup.com/gophers-frm/events/308682690/", date: "10 Jul 2025", location: "Frankfurt, Germany", git_repository: "https://github.com/floehden/gofrm59", status: "done"},
   ];
   return (
     <div className="space-y-16 py-10">
@@ -17,7 +18,7 @@ export default function Home() {
         <p className="max-w-2xl text-slate-400 text-lg leading-relaxed">
           Coming soon: A detailed introduction about myself and my journey into the world of DevOps and Network Automation.
            {/* With a solid background in Software Engineering, I bridge the gap between code and infrastructure. 
-          I am passionate about automating complex network flows and building robust CI/CD pipelines. */}
+          I am passionate about automating complex network flows and building robust CI/CD pipelines.- */}
           
         </p>
       </section>
@@ -57,12 +58,22 @@ export default function Home() {
       <section>
         <h3 className="text-2xl font-bold mb-6 flex items-center"><Mic className="mr-2"/> Talks & Presentations</h3>
         <div className="space-y-4">
-          {talks.map((talk, idx) => (
-            <a key={idx} href={talk.event_url} target="_blank" className="block p-4 bg-slate-900 border border-slate-800 hover:border-blue-500 transition rounded-lg group">
-              <h4 className="font-bold text-lg group-hover:text-blue-400 transition">{talk.title}</h4>
-              <p className="text-slate-500 text-sm">{talk.date} - {talk.location} | by {talk.organizer}</p>
-              <a href={talk.git_repository} target="_blank" className="text-blue-400 text-sm hover:underline">View Slides/Code</a>
-            </a>
+          {talks.map((talk, index) => (
+            <div key={index} className="bg-slate-800 p-4 rounded border border-slate-700 hover:border-blue-600 transition">
+              <h4 className="text-xl font-semibold text-white">
+                <a href={talk.event_url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  {talk.title}
+                </a>
+              </h4>
+              <p className="text-slate-400">
+                <strong>Organizer:</strong> {talk.organizer} | <strong>Date:</strong> {talk.date} | <strong>Location:</strong> {talk.location}
+              </p>
+              <p className="text-slate-400">
+                <a href={talk.git_repository} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+                  View Slides/Repository
+                </a>
+              </p>
+            </div>
           ))}
         </div>
       </section>
