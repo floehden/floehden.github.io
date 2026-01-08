@@ -38,6 +38,7 @@ export default function Home() {
             <li>Exploring new Containerlab topologies</li>
             <li>Contributing to Open Source Network tools</li>
             <li>CrossFit, Running, Biking and Church (Offline mode)</li>
+            <li>More details coming soon</li>
           </ul>
         </div>
       </section>
