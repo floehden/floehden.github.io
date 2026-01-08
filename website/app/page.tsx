@@ -9,6 +9,18 @@ export default function Home() {
     {organizer:"NetAuto Group", title: "What is Network Automation for everyone?", event_url: "https://www.meetup.com/netauto-rheinmain/events/308664470/", date: "04 Sep 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode1/readme.md", status: "done"},
     {organizer:"Frankfurt Rhein-Main Gophers Meetup", title: "Configuring network devices through Kubernetes", event_url: "https://www.meetup.com/gophers-frm/events/308682690/", date: "10 Jul 2025", location: "Frankfurt, Germany", git_repository: "https://github.com/floehden/gofrm59", status: "done"},
   ];
+  const interests = [
+    {name: "Network Automation", description: "Automating network configurations and management using modern tools and practices.", type: "technical"},
+    {name: "DevOps Practices", description: "Implementing CI/CD pipelines and infrastructure as code to streamline development and operations.", type: "technical"},
+    {name: "Cloud Computing", description: "Exploring cloud platforms and services to build scalable and resilient applications.", type: "technical"},
+    {name: "Programming", description: "Writing clean, efficient, and maintainable code in various programming languages.", type: "technical"},
+    /*{name: "Open Source Contribution", description: "Contributing to and maintaining open source projects that benefit the community.", type: "community"},*/
+    {name: "Tech Meetups", description: "Participating in local tech meetups to share knowledge and network with like-minded professionals.", type: "community"},
+    {name: "Running", description: "Running and biking to stay fit and healthy.", type: "personal"},
+    {name: "CrossFit", description: "Engaging in CrossFit workouts to build strength and endurance.", type: "personal"},
+    {name: "Church Activities", description: "Being active in church communities and events.", type: "personal"},
+    {name: "Biking", description: "Exploring nature and cities on my bike.", type: "personal"},
+  ];
   return (
     <div className="space-y-16 py-10">
       {/* Hero Section */}
@@ -35,14 +47,26 @@ export default function Home() {
         <div className="bg-slate-900 p-6 rounded-lg border border-slate-800">
           <h3 className="text-xl font-bold mb-4">Curiosity & Hobbies</h3>
           <ul className="list-disc list-inside text-slate-400 space-y-2">
-            <li>Exploring new Containerlab topologies</li>
-            <li>Contributing to Open Source Network tools</li>
+            <li>Exploring Open Source tools</li>
             <li>CrossFit, Running, Biking and Church (Offline mode)</li>
             <li>More details coming soon</li>
           </ul>
         </div>
       </section>
 
+      {/* Interests*/}
+      <section>
+        <h3 className="text-2xl font-bold mb-6 flex items-center"><Server className="mr-2"/> Areas of Interest</h3>
+        <div className="grid md:grid-cols-3 gap-6">
+          {interests.map(interest => (
+            <div key={interest.name} className="bg-slate-800 p-4 rounded-lg border border-slate-700 hover:border-blue-500 transition cursor-default">
+              <h4 className="font-bold text-lg mb-2">{interest.name}</h4>
+              <p className="text-slate-400 text-sm">{interest.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      
       {/* Skills */}
       <section>
         <h3 className="text-2xl font-bold mb-6 flex items-center"><Code className="mr-2"/> Tech Stack</h3>
