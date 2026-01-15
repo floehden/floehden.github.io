@@ -1,8 +1,16 @@
 name: Deploy to GitHub Pages
 
 on:
+  # Trigger on push to main branch
   push:
     branches: ["main"]
+  
+  # Trigger automatically every 6 hours to update Strava stats
+  schedule:
+    - cron: '0 */2 * * *'
+
+  # Allow manual trigger from Actions tab
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -16,7 +24,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # GLOBAL CHANGE: Tell all run commands to execute in the 'website' subdirectory
     defaults:
       run:
         working-directory: ./website
@@ -29,7 +36,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          # This caching helps speed up builds, but needs to know where the lockfile is
           cache: 'npm'
           cache-dependency-path: ./website/package-lock.json
 
@@ -38,11 +44,16 @@ jobs:
 
       - name: Build
         run: npm run build
+        # INJECT SECRETS HERE so Next.js can see them during build
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+          STRAVA_ATHLETE_ID: ${{ secrets.STRAVA_ATHLETE_ID }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Point to the docs folder INSIDE the website directory
           path: ./website/out
 
   deploy:
