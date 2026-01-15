@@ -19,7 +19,9 @@ async function getAccessToken() {
       refresh_token: refreshToken,
       grant_type: 'refresh_token',
     }),
-    cache: 'no-store',
+    // CRITICAL FIX: Changed from 'no-store' to 'force-cache'
+    // This tells Next.js: "It's okay to fetch this once during the build and use it."
+    cache: 'force-cache', 
   });
 
   return response.json();
