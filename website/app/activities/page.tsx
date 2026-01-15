@@ -77,9 +77,6 @@ export default async function Activities() {
               <h3 className="...">Recent Vibe</h3>
               <div className="flex flex-col h-full justify-center pb-6">
                 <div className="text-3xl font-bold text-brand-green">Active</div>
-                <p className="text-slate-500 text-sm">
-                  Most recent: {safeActivities[0] ? new Date(safeActivities[0].start_date).toLocaleDateString() : 'N/A'}
-                </p>
               </div>
             </div>
           </div>
