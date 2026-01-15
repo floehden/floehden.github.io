@@ -1,15 +1,11 @@
-import { getStravaActivities, getStravaStats } from "../lib/strava";
+import { getStravaStats } from "../lib/strava";
 import { Activity, Bike, Footprints, MapPin, Trophy, ExternalLink,  Timer, Zap } from "lucide-react";
 
 export default async function Activities() {
   // Fetch data in parallel
-  const [activities, stats] = await Promise.all([
-    getStravaActivities(),
+  const [stats] = await Promise.all([
     getStravaStats(),
   ]);
-
-  // Fallback if activities fail
-  const safeActivities = Array.isArray(activities) ? activities : [];
 
   // Helper to format distance (meters to km)
   const toKm = (m: number) => (m / 1000).toFixed(1);
