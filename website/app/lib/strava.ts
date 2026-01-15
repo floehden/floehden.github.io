@@ -54,28 +54,3 @@ export async function getStravaStats() {
     return null;
   }
 }
-
-export async function getStravaActivities() {
-  try {
-    const { access_token } = await getAccessToken();
-    if (!access_token) return [];
-
-    // Increased per_page to 50 to calculate CrossFit stats accurately
-    const response = await fetch(
-      `https://www.strava.com/api/v3/athlete/activities?per_page=50`, 
-      {
-        headers: {
-          Authorization: `Bearer ${access_token}`,
-        },
-        next: { revalidate: 3600 }, 
-      }
-    );
-
-    if (!response.ok) return [];
-
-    return response.json();
-  } catch (error) {
-    console.error("❌ Network error fetching activities:", error);
-    return [];
-  }
-}
