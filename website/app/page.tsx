@@ -54,16 +54,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Interests*/}
+      {/* Interests, Show Explanation only on hover in a floating box  */}
       <section>
-        <h3 className="text-2xl font-bold mb-6 flex items-center"><Server className="mr-2"/> Interests</h3>
+        <h3 className="text-2xl font-bold mb-6 flex items-center"><Server className="mr-2"/> Interests & Passions</h3>
         <div className="grid md:grid-cols-3 gap-6">
-          {interests.map(interest => (
-            <div key={interest.name} className="bg-slate-800 p-4 rounded-lg border border-slate-700 hover:border-blue-500 transition cursor-default">
-              <h4 className="font-bold text-lg mb-2">{interest.name}</h4>
-              <p className="text-slate-600 dark:text-slate-400 mb-2">{interest.description}</p>
-              <div className="opacity-0 hover:opacity-100 transition">
-                <p className="text-slate-500 text-sm italic">"{interest.explanation}"</p>
+          {interests.map((interest, idx) => (
+            <div key={idx} className="bg-slate-800 p-4 rounded-lg border border-slate-700 hover:border-blue-500 transition group relative">
+              <h4 className="text-lg font-bold text-slate-200 mb-2">{interest.name}</h4>
+              <p className="text-slate-400">{interest.description}</p>
+              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 p-3 bg-slate-900 text-slate-200 text-sm rounded-lg border border-slate-700 opacity-0 group-hover:opacity-100 transition pointer-events-none">
+                {interest.explanation}
               </div>
             </div>
           ))}
