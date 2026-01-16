@@ -59,8 +59,13 @@ export default function Home() {
         <h3 className="text-2xl font-bold mb-6 flex items-center"><Server className="mr-2"/> Interests & Passions</h3>
         <div className="grid md:grid-cols-3 gap-6">
           {interests.map((interest, idx) => (
-            <div key={idx} className="bg-slate-800 p-4 rounded-lg border border-slate-700 hover:border-blue-500 transition group relative">
-              <h4 className="text-lg font-bold text-slate-200 mb-2">{interest.name}</h4>
+              <div key={idx} className="bg-slate-800 p-4 rounded-lg border border-slate-700 hover:border-blue-500 transition group relative">
+                <div className="flex justify-between items-start mb-2">
+                <h4 className="text-lg font-bold text-slate-200 mb-2">{interest.name}</h4>
+                <span className="text-xs text-slate-500 whitespace-nowrap ml-4">
+                  {interest.type.charAt(0).toUpperCase() + interest.type.slice(1)}
+                </span>
+              </div>
               <p className="text-slate-400">{interest.description}</p>
               <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 p-3 bg-slate-900 text-slate-200 text-sm rounded-lg border border-slate-700 opacity-0 group-hover:opacity-100 transition pointer-events-none">
                 {interest.explanation}
