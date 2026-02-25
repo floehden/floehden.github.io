@@ -4,6 +4,7 @@ import { Terminal, Code, Server, Mic } from 'lucide-react';
 export default function Home() {
   const skills = ['Go (Golang)', 'Python', 'GitLab CI/CD', 'Kubernetes', 'Containerlab', 'Docker', 'Linux'];
   const talks = [
+    {organizer:"OpenRheinMain", title: "Cloud Native Network Observability: Treating Routers like Kubernetes Resources", event_url: "https://openrheinmain.org/", date: "20 Mar 2026", location: "Darmstadt, Germany", git_repository: "", status: "planned"},
     {organizer:"NetAuto Group", title: "Discussion on IPv6", event_url: "https://www.meetup.com/netauto-rheinmain/events/311887700/", date: "11 Dec 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode4/readme.md", status: "done"},
     {organizer:"NetAuto Group", title: "NetAuto Hackathon: Intermediate Task", event_url: "https://www.meetup.com/netauto-rheinmain/events/311340322/", date: "06 Nov 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode3/readme.md", status: "done"},
     {organizer:"NetAuto Group", title: "What is Network Automation for everyone?", event_url: "https://www.meetup.com/netauto-rheinmain/events/308664470/", date: "04 Sep 2025", location: "Neu-Isenburg, Germany", git_repository: "https://github.com/NetAuto-RheinMain/event-slides/blob/main/episode1/readme.md", status: "done"},
