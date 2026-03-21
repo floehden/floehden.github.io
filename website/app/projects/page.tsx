@@ -8,14 +8,6 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Kubernetes GNMI Monitor for Network Devices",
-      teaser: "A K8s controller that monitors network devices via GNMI.",
-      details: "This private project implements a Kubernetes controller that watches custom resources representing network devices. It establishes GNMI sessions to these devices, collects telemetry data, and exposes it via Prometheus metrics for monitoring purposes.",
-      status: "Private",
-      link: "#"
-    }, 
-    {
-      id: 2,
       title: "Netventure: Network Automation Game",
       teaser: "An interactive game to teach network automation concepts.",
       details: "This public project is a web-based game designed to help users learn network automation. Players complete challenges by writing scripts to automate network tasks, receiving feedback and progressing through levels.",
