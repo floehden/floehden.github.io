@@ -14,29 +14,17 @@ export default function Projects() {
       status: "Private",
       link: "#",
     },
-    /*{
-      id: 1,
-      title: "Network Config Generator",
-      teaser: "A Go-based tool to template router configs.",
-      details: "This private project uses Go templates to generate configurations for Cisco and Arista devices. It includes a complete unit test suite and integrates with NetBox as a Source of Truth.",
-      status: "Private",
-      link: "#"
-    },*/
-    /*{
-      id: 2,
-      title: "K8s Controller for NetOps",
-      teaser: "Public controller handling CRDs for switching.",
-      details: "Available on GitHub. This controller watches for custom Switch resources and provisions VLANs automatically via GNMI.",
-      status: "Public",
-      link: "https://github.com/floehden/example"
-    }*/
+
   ];
 
   const conferences = [
-    {name: "FOSDEM 2024", url: "https://fosdem.org/2024/", date: "3-4 Feb 2024", location: "Brussels, Belgium"},
-    {name: "Autocon 3", url: "https://networkautomation.forum/autocon3", date: "26-30 May 2025", location: "Prague, Czech Republic"},
-    {name: "ContainerDays 2025", url: "https://containerdays.io/", date: "10-12 Sep 2025", location: "Hamburg, Germany"},
-    {name: "DENOG 17", url: "https://www.denog.de/de/meetings/denog17/", date: "09-11 Nov 2025", location: "Germany"},
+    {name: "FOSDEM 2024", url: "https://fosdem.org/2024/", date: "3-4 Feb 2024", location: "Brussels, Belgium", status: "done"},
+    {name: "Autocon 3", url: "https://networkautomation.forum/autocon3", date: "26-30 May 2025", location: "Prague, Czech Republic", status: "done"},
+    {name: "ContainerDays 2025", url: "https://containerdays.io/", date: "10-12 Sep 2025", location: "Hamburg, Germany", status: "done"},
+    {name: "DENOG 17", url: "https://www.denog.de/de/meetings/denog17/", date: "09-11 Nov 2025", location: "Germany", status: "done"},
+    {name: "OpenRheinMain 2026", url: "https://openrheinmain.org/", date: "20 Mar 2026", location: "Darmstadt, Germany", status: "done"},
+    {name: "Autocon 5", url: "https://networkautomation.forum/autocon5", date: "10-13 Jun 2026", location: "Munich, Germany", status: "planned"},
+    
   ];
 
   const resources = [
@@ -87,7 +75,7 @@ export default function Projects() {
         <div className="grid md:grid-cols-2 gap-4">
           {conferences.map((conf, idx) => (
             <a key={idx} href={conf.url} target="_blank" className="block p-4 bg-slate-900 border border-slate-800 hover:border-purple-500 transition rounded-lg group">
-              <h4 className="font-bold text-lg group-hover:text-purple-400 transition">{conf.name}</h4>
+              <h4 className="font-bold text-lg group-hover:text-purple-400 transition">{conf.name} <span className="text-xs ml-2 bg-slate-700 px-2 py-1 rounded text-slate-300">{conf.status}</span></h4>
               <p className="text-slate-500 text-sm">{conf.date} - {conf.location}</p>
             </a>
           ))}
