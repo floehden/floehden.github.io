@@ -32,7 +32,7 @@ export default function Projects() {
     { name: "NetAuto Bootcamp", url: "https://github.com/NetAuto-RheinMain/NetAuto-Bootcamp", category: "Learning" },
     { name: "Containerlab", url: "https://containerlab.dev/", category: "Tools" },
     { name: "Network Automation Forum (NAF)", url: "https://networkautomation.forum/", category: "Community" },
-    { name: "NetDevOpsChic Blog", url: "https://medium.com/@netopschic", category: "Blog" },
+    { name: "NetOpsChic Blog", url: "https://medium.com/@netopschic", category: "Blog" },
   ];
 
   return (
