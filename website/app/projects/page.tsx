@@ -32,6 +32,7 @@ export default function Projects() {
     { name: "NetAuto Bootcamp", url: "https://github.com/NetAuto-RheinMain/NetAuto-Bootcamp", category: "Learning" },
     { name: "Containerlab", url: "https://containerlab.dev/", category: "Tools" },
     { name: "Network Automation Forum (NAF)", url: "https://networkautomation.forum/", category: "Community" },
+    { name: "NetDevOpsChic Blog", url: "https://medium.com/@netopschic", category: "Blog" },
   ];
 
   return (
@@ -75,7 +76,10 @@ export default function Projects() {
         <div className="grid md:grid-cols-2 gap-4">
           {conferences.map((conf, idx) => (
             <a key={idx} href={conf.url} target="_blank" className="block p-4 bg-slate-900 border border-slate-800 hover:border-purple-500 transition rounded-lg group">
-              <h4 className="font-bold text-lg group-hover:text-purple-400 transition">{conf.name} <span className="text-xs ml-2 bg-slate-700 px-2 py-1 rounded text-slate-300">{conf.status}</span></h4>
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-bold text-lg group-hover:text-purple-400 transition">{conf.name}</h4>
+                <span className="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300">{conf.status}</span>
+              </div>
               <p className="text-slate-500 text-sm">{conf.date} - {conf.location}</p>
             </a>
           ))}

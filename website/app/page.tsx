@@ -27,7 +27,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="space-y-4">
         <h1 className="text-5xl font-bold text-slate-900 dark:text-white">Hello, I'm Florian.</h1>
-        <h2 className="text-2xl text-blue-600 dark:text-blue-400">DevOps Engineer & Network Automation Enthusiast</h2>
+        <h2 className="text-2xl text-blue-600 dark:text-blue-400">NetDevOps Engineer & Network Automation Enthusiast</h2>
         <p className="max-w-2xl text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
           Coming soon: A detailed introduction about myself and my journey into the world of DevOps and Network Automation.
            {/* With a solid background in Software Engineering, I bridge the gap between code and infrastructure. 
@@ -94,7 +94,10 @@ export default function Home() {
         <div className="space-y-4">
           {talks.map((talk, idx) => (
             <a key={idx} href={talk.event_url} target="_blank" className="block p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 transition rounded-lg group">
-              <h4 className="font-bold text-lg group-hover:text-slate-600 dark:text-slate-400 transition">{talk.title}</h4>
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-bold text-lg group-hover:text-slate-600 dark:text-slate-400 transition">{talk.title}</h4>
+                <span className="text-xs bg-slate-300 dark:bg-slate-700 px-2 py-1 rounded text-slate-700 dark:text-slate-300">{talk.status}</span>
+              </div>
               <p className="text-slate-500 text-sm">{talk.date} - {talk.location} | by {talk.organizer}</p>
               <a href={talk.git_repository} target="_blank" className="text-slate-600 dark:text-slate-400 text-sm hover:underline">View Slides/Code</a>
             </a>
