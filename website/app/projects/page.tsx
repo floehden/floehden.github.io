@@ -12,9 +12,36 @@ export default function Projects() {
       teaser: "An interactive game to teach network automation concepts.",
       details: "This public project is a web-based game designed to help users learn network automation. Players complete challenges by writing scripts to automate network tasks, receiving feedback and progressing through levels.",
       status: "Private",
+      branch: "main",
       link: "#",
     },
-
+    {
+      id: 2,
+      title: "NetAuto Bootcamp",
+      teaser: "A comprehensive training program for network automation.",
+      details: "The NetAuto Bootcamp is a structured learning path that covers essential topics in network automation, including tools, best practices, and real-world scenarios. It includes hands-on labs and projects to reinforce learning.",
+      status: "Public",
+      branch: "main",
+      link: "https://github.com/NetAuto-RheinMain/NetAuto-Bootcamp",
+    },
+    {
+      id: 3,
+      title: "Cloud Native Network Observability Showcase",
+      teaser: "A showcase of cloud-native network observability solutions.",
+      details: "This project demonstrates various cloud-native approaches to network observability, showcasing tools and techniques for monitoring and analyzing network traffic in modern infrastructures.",
+      status: "Public",
+      branch: "main",
+      link: "https://github.com/floehden/talk-openrheinmain",
+    },
+    {
+      id: 4,
+      title: "Kubernetes Network Spine-Leaf Lab",
+      teaser: "A lab environment for practicing Kubernetes networking concepts.",
+      details: "This project provides a hands-on environment for learning and practicing Kubernetes networking, including spine-leaf architectures and network policies.",
+      status: "Public",
+      branch: "kind_clusters",
+      link: "https://github.com/floehden/srl-telemetry-lab/tree/kind_clusters",
+    }
   ];
 
   const conferences = [
@@ -61,7 +88,7 @@ export default function Projects() {
                   {p.status === 'Public' && (
                     <a href={p.link} target="_blank" className="inline-flex items-center mt-4 text-blue-400 hover:underline">
                       View on GitHub <ExternalLink className="w-4 h-4 ml-1"/>
-                    </a>
+                    </a> 
                   )}
                 </div>
               )}

@@ -1,4 +1,3 @@
-import { stat } from 'fs';
 import { Terminal, Code, Server, Mic } from 'lucide-react';
 
 export default function Home() {
