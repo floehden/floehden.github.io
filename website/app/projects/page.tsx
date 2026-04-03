@@ -51,7 +51,7 @@ export default function Projects() {
     {name: "DENOG 17", url: "https://www.denog.de/de/meetings/denog17/", date: "09-11 Nov 2025", location: "Germany", status: "done"},
     {name: "OpenRheinMain 2026", url: "https://openrheinmain.org/", date: "20 Mar 2026", location: "Darmstadt, Germany", status: "done"},
     {name: "Autocon 5", url: "https://networkautomation.forum/autocon5", date: "10-13 Jun 2026", location: "Munich, Germany", status: "planned"},
-    
+    {name: "ContainerDays 2026", url: "https://containerdays.io/", date: "02-04 Sep 2026", location: "Hamburg, Germany", status: "planned"},
   ];
 
   const resources = [
