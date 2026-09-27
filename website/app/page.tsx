@@ -38,8 +38,7 @@ export default function Home() {
         <div className="bg-slate-50 dark:bg-slate-50 dark:bg-slate-900 p-6 rounded-lg border border-slate-200 dark:border-slate-200 dark:border-slate-800">
           <h3 className="text-xl font-bold mb-4 flex items-center"><Terminal className="mr-2" /> The Journey</h3>
           <p className="text-slate-600 dark:text-slate-400">
-            My path started in traditional software engineering, but my curiosity led me to the world of operations and networking.
-            More coming soon.
+            My journey into Cloud and Network Orchestration wasn't a straight line—it was a steady evolution moving up the technology stack. I started at the foundational data layer, working deeply with databases, before transitioning into pure software engineering. As I spent more time building applications, I became fascinated by how they were deployed, scaled, and maintained. That curiosity pulled me naturally into DevOps and eventually into cloud-native architecture. The more I worked with distributed systems and Kubernetes, the more I realized the network was the ultimate puzzle. Today, all of those past experiences converge in my current focus: applying software engineering principles to network automation and cloud orchestration to build truly programmable infrastructure.
           </p>
         </div>
         <div className="bg-slate-50 dark:bg-slate-50 dark:bg-slate-900 p-6 rounded-lg border border-slate-200 dark:border-slate-200 dark:border-slate-800">
