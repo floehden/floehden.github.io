@@ -29,10 +29,7 @@ export default function Home() {
         <h1 className="text-5xl font-bold text-slate-900 dark:text-white">Hello, I'm Florian.</h1>
         <h2 className="text-2xl text-blue-600 dark:text-blue-400">NetDevOps Engineer & Network Automation Enthusiast</h2>
         <p className="max-w-2xl text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
-          Coming soon: A detailed introduction about myself and my journey into the world of DevOps and Network Automation.
-           {/* With a solid background in Software Engineering, I bridge the gap between code and infrastructure. 
-          I am passionate about automating complex network flows and building robust CI/CD pipelines.- */}
-          
+          My path in tech started with a solid academic foundation in Computer Science, but it was the intersection of networking and cloud architecture that truly captured my focus. I quickly realized that the future wasn't just in pure network automation, but in holistic cloud and network orchestration. Now, I specialize in designing observability pipelines and orchestrating multi-vendor topologies using modern DevOps practices. Beyond my day-to-day engineering, I am passionate about giving back to the community that helped me learn. I actively build open-source tools to solve real-world testing challenges and co-organize the NetAuto Group Rhein-Main to foster a culture of knowledge sharing, open collaboration, and technical growth.
         </p>
       </section>
 
@@ -48,9 +45,8 @@ export default function Home() {
         <div className="bg-slate-50 dark:bg-slate-50 dark:bg-slate-900 p-6 rounded-lg border border-slate-200 dark:border-slate-200 dark:border-slate-800">
           <h3 className="text-xl font-bold mb-4">Curiosity & Hobbies</h3>
           <ul className="list-disc list-inside text-slate-600 dark:text-slate-400 space-y-2">
-            <li>Exploring Open Source tools</li>
+            <li>Exploring and developing Open Source tools</li>
             <li>CrossFit, Running, Biking and Church (Offline mode)</li>
-            <li>More details coming soon</li>
           </ul>
         </div>
       </section>
